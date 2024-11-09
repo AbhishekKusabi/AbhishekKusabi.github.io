@@ -1,0 +1,171 @@
+PORTFOLIO WEBSITE DOCUMENTATION
+=============================
+
+Table of Contents:
+1. Project Overview
+2. File Structure
+3. Technologies Used
+4. Components Breakdown
+5. Features
+6. JavaScript Functionality
+7. Styling Details
+8. Responsive Design
+9. Setup Instructions
+
+1. PROJECT OVERVIEW
+------------------
+A modern, responsive portfolio website featuring:
+- Dark/Light mode toggle
+- Smooth scrolling navigation
+- Rotating profession display
+- Interactive project cards
+- Skills showcase
+- Contact form
+- Responsive design for all devices
+
+2. FILE STRUCTURE
+----------------
+portfolio/
+├── index.html          # Main HTML file
+├── css/
+│   └── style.css      # All styling
+├── js/
+│   └── main.js        # JavaScript functionality
+└── images/            # Image assets
+
+3. TECHNOLOGIES USED
+-------------------
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Font Awesome Icons
+- Boxicons
+- ScrollReveal.js
+- Google Fonts (Poppins)
+
+4. COMPONENTS BREAKDOWN
+----------------------
+A. Header & Navigation
+   - Fixed positioning
+   - Dark mode toggle
+   - Responsive menu
+   - Active link highlighting
+
+B. Home Section
+   - Introduction
+   - Social media links
+   - CV download button
+   - Rotating profession display
+   - Profile image
+
+C. About Section
+   - Profile image with hover effect
+   - Personal description
+   - Read More button
+
+D. Projects Section
+   - Project cards with hover effects
+   - Project descriptions
+   - Icons for each project
+   - Read More buttons
+
+E. Skills Section
+   - Skill categories
+   - Icons for each skill
+   - Responsive grid layout
+
+F. Contact Section
+   - Contact form
+   - Input validation
+   - Submit button with loading state
+
+G. Footer
+   - Copyright information
+
+5. FEATURES
+-----------
+A. Dark/Light Mode
+   - Toggle button in header
+   - Persistent state
+   - Smooth transition
+
+B. Navigation
+   - Smooth scrolling
+   - Active section highlighting
+   - Mobile-responsive menu
+   - Sticky header on scroll
+
+C. Animations
+   - ScrollReveal animations
+   - Hover effects
+   - Profession rotation
+   - Loading states
+
+6. JAVASCRIPT FUNCTIONALITY
+--------------------------
+A. Navigation
+   - Menu toggle
+   - Smooth scrolling
+   - Active section detection
+   - Sticky header
+
+B. Dark Mode
+   - Theme toggle
+   - Icon switching
+   - State management
+
+C. Animations
+   - ScrollReveal initialization
+   - Project card hover effects
+   - Form submission handling
+
+7. STYLING DETAILS
+-----------------
+A. Color Scheme
+   Dark Mode:
+   - Background: #141619
+   - Secondary Background: #2c2e3a
+   - Text: #B3B4BD
+   - Accent: #38bdf8
+
+   Light Mode:
+   - Background: #ffffff
+   - Secondary Background: #f0f8ff
+   - Text: #1f242d
+   - Accent: #38bdf8
+
+B. Typography
+   - Font Family: Poppins
+   - Various font weights: 300 to 900
+   - Responsive font sizing
+
+8. RESPONSIVE DESIGN
+-------------------
+Breakpoints:
+- 1200px: Large devices
+- 991px: Medium devices
+- 768px: Tablets
+- 617px: Small tablets
+- 450px: Mobile devices
+- 365px: Small mobile devices
+- 320px: Extra small devices
+
+Responsive Features:
+- Flexible grid layouts
+- Mobile menu
+- Responsive images
+- Adaptive typography
+- Stack layouts on mobile
+
+9. SETUP INSTRUCTIONS
+--------------------
+1. Clone the repository
+2. Ensure all files are in correct structure
+3. Add your images to images folder
+4. Update personal information in index.html
+5. Update social media links
+6. Add your projects
+7. Test all functionalities
+8. Deploy to your hosting service
+
+Note: Remember to replace placeholder content with your actual information before deploying. 
