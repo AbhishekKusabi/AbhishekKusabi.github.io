@@ -1,0 +1,5 @@
+# Documentation files
+*.pdf
+*.doc
+*.docx
+documentation/
