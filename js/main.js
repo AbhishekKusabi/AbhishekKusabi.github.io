@@ -100,7 +100,7 @@ contactForm.addEventListener('submit', function(e) {
     // Single email notification to you
     emailjs.send(
         "service_98xph98",
-        "template_gcdaw8o",     // Template for your notification
+        "template_gcdaw8o",
         {
             from_name: formData.name,
             from_email: formData.email,
