@@ -4,3 +4,14 @@
 *.docx
 *.txt
 documentation/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor folders
+.vscode/
+.idea/
+
+# Node modules if you add any in future
+node_modules/
