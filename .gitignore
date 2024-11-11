@@ -9,9 +9,17 @@ documentation/
 .DS_Store
 Thumbs.db
 
-# IDE/Editor folders
+# IDE files
 .vscode/
 .idea/
 
-# Node modules if you add any in future
+# Dependencies
 node_modules/
+
+# Build files
+dist/
+build/
+
+# Environment variables
+.env
+.env.local

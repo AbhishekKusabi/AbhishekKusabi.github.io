@@ -292,6 +292,10 @@ body {
     .right-content {
         display: none;
     }
+
+    .footer {
+        padding: 2rem 4%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -322,15 +326,62 @@ body {
         font-size: 2rem;
         margin: 3rem 0;
     }
+
+    html {
+        font-size: 55%;
+    }
+
+    /* Adjust container widths */
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjust home section for mobile */
+    .home-content {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* Adjust contact form */
+    .contact form .input-box {
+        flex-direction: column;
+    }
+
+    .contact form .input-box .input-field {
+        width: 100%;
+    }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     html {
         font-size: 50%;
     }
-    
+
+    /* Adjust padding for smaller screens */
+    section {
+        padding: 6rem 4% 2rem;
+    }
+
+    /* Make sure no horizontal scroll */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Adjust text sizes for mobile */
     .home-content h1 {
-        font-size: 5rem;
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
     }
 }
 
@@ -387,9 +438,9 @@ body {
 
 /* Services/Projects Section Styles */
 .services {
-    padding: 6rem 9%;
     min-height: auto;
-    background: var(--bg-color);
+    padding-bottom: 7rem;
+    background: var(--second-bg-color);
 }
 
 .services h2 {
@@ -398,40 +449,74 @@ body {
 
 .services .services-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 0 4%;
 }
 
 .services-container .services-box {
-    background: var(--second-bg-color);
-    padding: 3rem 2rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
-    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--main-color);
+    transition: .5s ease;
+}
+
+.services-box:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
 .services-box i {
     font-size: 7rem;
     color: var(--main-color);
-    margin-bottom: 2rem;
 }
 
 .services-box h3 {
     font-size: 2.6rem;
-    margin-bottom: 1.5rem;
+    margin: 1rem 0;
 }
 
 .services-box p {
     font-size: 1.6rem;
-    margin-bottom: 2rem;
-    flex-grow: 1;
+    margin: 1rem 0 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .services-box {
+        padding: 1.5rem;
+    }
+
+    .services-box h3 {
+        font-size: 2.2rem;
+    }
+
+    .services-box p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+    }
+
+    .services-box {
+        margin-bottom: 2rem;
+    }
 }
 
 /* Skills Section Styles */
@@ -659,6 +744,18 @@ body {
         opacity: 1;
         transform: translate(-50%, -50%);
     }
+}
+
+/* Add this to prevent horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 
