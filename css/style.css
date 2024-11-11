@@ -64,6 +64,19 @@ body {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
+    width: 40px;
+    height: auto;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.header .logo {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .navbar a {
@@ -541,6 +554,7 @@ body {
     .services-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 @media (max-width: 617px) {
@@ -646,4 +660,5 @@ body {
         transform: translate(-50%, -50%);
     }
 }
+
 
