@@ -2,9 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set dark mode as default
     document.body.classList.add('dark-mode');
     darkModeIcon.classList.replace('bx-moon', 'bx-sun');
-    
+
     // Initialize EmailJS
     emailjs.init("lEo0cx4BBjOvuVWEW");
+
+    // Initialize Typed.js
+    new Typed('.typed-text', {
+        strings: [
+            'Program Manager',
+            'Operations Analyst',
+            'Engineering Management Graduate Student',
+        ],
+        typeSpeed: 65,
+        backSpeed: 40,
+        backDelay: 2000,
+        loop: true,
+    });
 });
 
 // Menu icon navbar
@@ -31,15 +44,14 @@ window.addEventListener('scroll', () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector('header nav a[href*=' + id + ']');
+            if (activeLink) activeLink.classList.add('active');
         }
     });
 
-    // Remove menu icon navbar when scrolling
+    // Close mobile menu on scroll
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 });
@@ -49,19 +61,19 @@ let darkModeIcon = document.querySelector('#darkMode-icon');
 
 darkModeIcon.onclick = () => {
     document.body.classList.toggle('light-mode');
-    if(document.body.classList.contains('light-mode')) {
+    if (document.body.classList.contains('light-mode')) {
         darkModeIcon.classList.replace('bx-moon', 'bx-sun');
     } else {
         darkModeIcon.classList.replace('bx-sun', 'bx-moon');
     }
 };
 
-
+// Contact form
 const contactForm = document.getElementById('contactForm');
 
 const popupHTML = `
     <div class="popup-notification" id="popupNotification">
-        <h3 id="popupTitle">Thank You! 🎉</h3>
+        <h3 id="popupTitle">Thank You!</h3>
         <p id="popupMessage">Your message has been sent successfully. I will get back to you soon!</p>
         <button onclick="closePopup()">Close</button>
     </div>
@@ -77,14 +89,14 @@ function closePopup() {
 }
 
 function showPopup(success, message) {
-    popupTitle.textContent = success ? 'Thank You! 🎉' : 'Oops! 😕';
+    popupTitle.textContent = success ? 'Message Sent!' : 'Oops!';
     popupMessage.textContent = message;
     popup.classList.add('show');
 }
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     const submitBtn = this.querySelector('input[type="submit"]');
     submitBtn.value = 'Sending...';
     submitBtn.disabled = true;
@@ -97,7 +109,6 @@ contactForm.addEventListener('submit', function(e) {
         message: this.querySelector('textarea[name="message"]').value,
     };
 
-    // Single email notification to you
     emailjs.send(
         "service_98xph98",
         "template_gcdaw8o",
@@ -111,12 +122,10 @@ contactForm.addEventListener('submit', function(e) {
         }
     )
     .then(() => {
-        console.log('Email sent successfully!');
         showPopup(true, 'Your message has been sent successfully. I will get back to you soon!');
         this.reset();
     })
-    .catch((error) => {
-        console.error('Failed to send email:', error);
+    .catch(() => {
         showPopup(false, 'Sorry, there was an error sending your message. Please try again later.');
     })
     .finally(() => {
@@ -128,20 +137,10 @@ contactForm.addEventListener('submit', function(e) {
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Project cards hover effect
-document.querySelectorAll('.services-box').forEach(box => {
-    box.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px)';
-    });
-    
-    box.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });

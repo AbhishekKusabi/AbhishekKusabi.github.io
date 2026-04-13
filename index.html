@@ -4,30 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- Add this line for basic favicon -->
+
     <link rel="icon" type="image/png" href="Images/favicon.png">
-    
-    <title>Abhishek Kusabi | Portfolio</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Add this in the head section, after Font Awesome -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="/Images/favicon.png" type="image/x-icon">
-    <!-- Add these lines for favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+
+    <title>Abhishek Kusabi | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dark-mode">
+
     <!-- Header -->
     <header class="header">
         <a href="#" class="logo">Portfolio.</a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
+            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
@@ -41,12 +37,16 @@
         <div class="home-content">
             <h3>Hello, I am</h3>
             <h1>Abhishek Kusabi</h1>
-            <p>I am a passionate Frontend Developer with a keen eye for creating beautiful, responsive, and user-friendly web applications.</p>
-            
+            <h2 class="home-role"><span class="typed-text"></span></h2>
+            <p>Engineering Management Graduate Student at Tufts University combining technical expertise with program management skills to drive operational impact at scale.</p>
+
             <div class="social-media">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/abhishekkusabi" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
 
             <a href="#" class="btn">Download CV</a>
@@ -62,14 +62,76 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="Images/Profile.jpg" alt="About Image">
+            <img src="Images/Profile.jpg" alt="Abhishek Kusabi">
         </div>
 
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
-            <!-- <h3>Frontend Developer!</h3> -->
-            <p>I am a passionate Frontend Developer with a keen eye for creating beautiful, responsive, and user-friendly web applications. Currently pursuing my Bachelor's in Information Science and Engineering, at K.L.S Gogte Institute of Technology, I specialize in transforming design concepts into seamless, interactive user experiences.</p>
-            <a href="#" class="btn">Read More</a>
+            <p class="about-desc">I combine technical skills with program management experience to drive data-backed process improvements. I've led cross-functional teams, conducted field operations, built ML models, and developed 0-to-1 products. Passionate about solving real operational problems through firsthand observation and data-driven decision making.</p>
+
+            <div class="education-timeline">
+                <div class="edu-item">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h4>MS Engineering Management</h4>
+                        <p>Tufts University &bull; GPA: 3.67</p>
+                        <span>Sept 2025 &ndash; May 2027 &nbsp;&bull;&nbsp; Tufts Co-op Program</span>
+                    </div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h4>BE Information Science Engineering</h4>
+                        <p>K.L.S Gogte Institute of Technology &bull; CGPA: 8.84</p>
+                        <span>Dec 2021 &ndash; Jun 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <h2 class="heading">My <span>Experience</span></h2>
+
+        <div class="experience-container">
+            <div class="experience-box">
+                <div class="exp-header">
+                    <div class="exp-title-group">
+                        <h3>Program Management Intern</h3>
+                        <span class="exp-company">
+                            <i class="fas fa-building"></i> Creintors Automation Solutions
+                        </span>
+                    </div>
+                    <span class="exp-date">Sept 2024 &ndash; Jan 2025</span>
+                </div>
+                <ul class="exp-list">
+                    <li>Led 6-person cross-functional team to deliver 0-to-1 recruitment platform</li>
+                    <li>Reduced operational task steps by <strong>40%</strong></li>
+                    <li>Managed end-to-end project execution across a 5-month roadmap</li>
+                </ul>
+            </div>
+
+            <div class="experience-box">
+                <div class="exp-header">
+                    <div class="exp-title-group">
+                        <h3>Field Operations Intern</h3>
+                        <span class="exp-company">
+                            <i class="fas fa-landmark"></i> Local Government Office
+                        </span>
+                    </div>
+                    <span class="exp-date">Feb 2023 &ndash; Apr 2023</span>
+                </div>
+                <ul class="exp-list">
+                    <li>Led team surveying <strong>250+ households</strong> in 30 days</li>
+                    <li>Identified 3 systemic gaps in tax records</li>
+                    <li>Findings directly triggered digitization of property tax data</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -79,24 +141,75 @@
 
         <div class="services-container">
             <div class="services-box">
-                <i class="fas fa-code"></i>
+                <i class="fas fa-calendar-alt"></i>
+                <h3>KaalSync</h3>
+                <p class="project-desc">Unified Calendar Management Platform built after 40+ user interviews. Integrated Google &amp; Outlook APIs for real-time conflict detection; achieved 83% intent-to-use rate in pilot testing.</p>
+                <div class="tech-stack">
+                    <span>React</span>
+                    <span>Google Calendar API</span>
+                    <span>Outlook API</span>
+                </div>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Assessment Book Scanner</h3>
+                <p class="project-desc">Android OCR application automating academic mark entry. Reduced manual cycle time by 60%+. Won 1st Place at Project Expo 2024 and secured KSCST state-level funding.</p>
+                <div class="tech-stack">
+                    <span>Android</span>
+                    <span>OCR</span>
+                    <span>Firebase</span>
+                </div>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fas fa-brain"></i>
+                <h3>VARK Learning Recommendation</h3>
+                <p class="project-desc">ML research analyzing 2,500+ student records using Random Forest, Logistic Regression &amp; SVM. Achieved 89.89% prediction accuracy. Research accepted for publication.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Scikit-learn</span>
+                    <span>Pandas</span>
+                    <span>SQL</span>
+                </div>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Financial Intelligence &amp; Analysis</h3>
+                <p class="project-desc">Built 5-year pro forma financial model (P&amp;L, Cash Flow). Identified 66% gross margin, 18% EBITDA, and 2-month breakeven. Validated market entry feasibility.</p>
+                <div class="tech-stack">
+                    <span>Excel</span>
+                    <span>Financial Modeling</span>
+                    <span>Pro Forma</span>
+                </div>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fas fa-heartbeat"></i>
                 <h3>MedTalks</h3>
-                <p>A healthcare platform connecting patients with professionals for online medical consultations.</p>
-                <a href="#" class="btn">Read More</a>
+                <p class="project-desc">A healthcare platform connecting patients with professionals for online medical consultations, enabling accessible and efficient healthcare delivery.</p>
+                <div class="tech-stack">
+                    <span>Web Development</span>
+                    <span>Healthcare</span>
+                </div>
+                <a href="#" class="btn">View Project</a>
             </div>
 
             <div class="services-box">
                 <i class="fas fa-chart-line"></i>
-                <h3>Predict-ETH</h3>
-                <p>Machine Learning model to predict Ethereum prices using historical data.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-box">
-                <i class="fas fa-lock"></i>
-                <h3>File Encryption System</h3>
-                <p>A Java-based encryption and decryption system using character shifting algorithms.</p>
-                <a href="#" class="btn">Read More</a>
+                <h3>Ethereum Price Prediction</h3>
+                <p class="project-desc">Machine Learning model to predict Ethereum cryptocurrency prices using historical data and advanced time-series analysis techniques.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Machine Learning</span>
+                    <span>Time-Series</span>
+                </div>
+                <a href="#" class="btn">View Project</a>
             </div>
         </div>
     </section>
@@ -107,21 +220,52 @@
 
         <div class="skills-container">
             <div class="skills-box">
-                <i class="fas fa-code"></i>
-                <h3>Web Development</h3>
-                <p>HTML5, CSS3, JavaScript, React.js</p>
+                <i class="fas fa-tasks"></i>
+                <h3>Program &amp; Operations Management</h3>
+                <div class="skill-tags">
+                    <span>Roadmap Planning</span>
+                    <span>Cross-Functional Leadership</span>
+                    <span>Stakeholder Management</span>
+                    <span>Requirements Gathering</span>
+                    <span>Process Improvement</span>
+                    <span>RACI Framework</span>
+                    <span>Jira</span>
+                    <span>Smartsheets</span>
+                    <span>Gantt Charts</span>
+                </div>
             </div>
 
             <div class="skills-box">
-                <i class="fas fa-tools"></i>
-                <h3>Tools & Technologies</h3>
-                <p>Git, Github, VS Code</p>
+                <i class="fas fa-chart-pie"></i>
+                <h3>Data &amp; Analytics</h3>
+                <div class="skill-tags">
+                    <span>Excel (Financial Modeling)</span>
+                    <span>Python (Pandas, NumPy)</span>
+                    <span>Scikit-learn</span>
+                    <span>SQL (MySQL)</span>
+                    <span>Machine Learning</span>
+                    <span>Data Visualization</span>
+                    <span>A/B Testing</span>
+                    <span>Market Research</span>
+                    <span>Operational Metrics</span>
+                </div>
             </div>
 
             <div class="skills-box">
                 <i class="fas fa-laptop-code"></i>
-                <h3>Programming Languages</h3>
-                <p>Java, Python, JavaScript</p>
+                <h3>Technical</h3>
+                <div class="skill-tags">
+                    <span>Java</span>
+                    <span>JavaScript</span>
+                    <span>React.js</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Git</span>
+                    <span>Firebase</span>
+                    <span>Android Development</span>
+                    <span>OCR Technology</span>
+                    <span>API Integration</span>
+                </div>
             </div>
         </div>
     </section>
@@ -143,14 +287,13 @@
             <input type="submit" value="Send Message" class="btn">
         </form>
 
-        <!-- Add this notification div -->
         <div class="form-notification" id="formNotification"></div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2024 by Abhishek Kusabi | All Rights Reserved.</p>
+            <p>Copyright &copy; 2025 by Abhishek Kusabi | All Rights Reserved.</p>
         </div>
     </footer>
 
