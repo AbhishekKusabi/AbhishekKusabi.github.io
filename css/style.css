@@ -265,6 +265,51 @@ body.light-mode .header.sticky {
     animation: fadeInUp .6s ease forwards .25s;
 }
 
+/* Stats card (replaces SVG dashboard) */
+.stats-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1.4rem;
+    padding: 4rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.stat-number {
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--text-color);
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.stat-plus {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.stat-label {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+.stat-divider {
+    height: 1px;
+    background: var(--border-color);
+}
+
 .home-img {
     width: 100%;
     border-radius: 1.4rem;
@@ -707,6 +752,69 @@ body.light-mode .header.sticky {
     color: var(--main-color);
     border-color: var(--main-color);
     background: var(--tag-bg);
+}
+
+
+/* ===================== AWARDS ===================== */
+.awards {
+    padding: 9rem 9%;
+    background: var(--second-bg-color);
+}
+
+.awards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.award-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.4rem;
+    background: var(--card-bg);
+    padding: 2.8rem 3rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--border-color);
+    transition: .25s ease;
+}
+
+.award-item:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 8px 30px var(--glow);
+    transform: translateX(4px);
+}
+
+.award-icon {
+    flex-shrink: 0;
+    width: 5rem;
+    height: 5rem;
+    background: var(--tag-bg);
+    border: 1px solid var(--border-color);
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award-icon i {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.award-details h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: .8rem;
+    letter-spacing: -0.01em;
+}
+
+.award-details p {
+    font-size: 1.45rem;
+    color: var(--text-muted);
+    line-height: 1.6;
 }
 
 
