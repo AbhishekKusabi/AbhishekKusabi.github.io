@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Typed.js
     new Typed('.typed-text', {
         strings: [
-            'Program Manager',
-            'Operations Analyst',
-            'Engineering Management Graduate Student',
+            'Program Management',
+            'Operations',
+            'Process Automation',
         ],
         typeSpeed: 65,
         backSpeed: 40,
